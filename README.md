@@ -1,1 +1,1 @@
-# This is my learning journey with java.
+# My learning journey with java.
