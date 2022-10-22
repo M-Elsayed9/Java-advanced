@@ -1,0 +1,107 @@
+An object has 
+- fields (data)
+- methods (behavior, often making use of the data).
+All of these are specified by a class. So a class has:
+ - a set of fields and
+ - a set of methods.
+A class also has constructors, which provide a way to create and
+initialize objects. 
+
+Encapsulation (aka information hiding): Making fields accessible 
+only to the class in which they are declared. This makes our 
+classes better, since it allows us, as the programmers of the class,
+to control the values that can be assigned to fields. Additionally, 
+it gives us the flexibility to change the internal details of the 
+class without breaking code that relies upon our class. 
+
+Constructors: 
+- Look similar to methods.
+- But do not have an explicit return type. 
+- Always have the same name as the class.
+- Memory allocation for a new object gets taken care of by Java
+  behind the scenes. In a constructor, we typically initialize 
+  the fields of the new object.
+- If we don’t write a constructor in a class, Java provides a 
+  default constructor, which can be called with no arguments. 
+  The default constructor doesn't really do much, but it exists.
+- If we write a constructor in a class, the default 
+  constructor provided by Java goes away. 
+- Just like methods, constructors can be overloaded -- meaning 
+  that there can be multiple constructors with the same name 
+  in a class, as long as there is a difference in their 
+  parameter types, or in the order of their parameter types, 
+  or in the number of their parameter types. 
+
+The "this" keyword:
+- Every constructor and method of a class, except for static 
+  methods (see below), automatically has access to a reference 
+  named "this". 
+- In the case of a constructor, "this" points to the object 
+  that's currently being created. 
+- In the case of a (non-static) method, "this" points to the object 
+  which we used to call the method. For example, when we call 
+  the toString() method by saying p1.toString(), the "this" reference 
+  inside the toString() method points to the same object that p1 
+  points to. 
+- Suppose a method (or constructor) has a local variable (such 
+  as a parameter) with the same name as a field of the current 
+  class. Then the name, when used by itself, indicates the 
+  local variable, not the field. To access to the field, 
+  use the "this" keyword. 
+- Another use of the "this" keyword: For a constructor to call 
+  another constructor of the same class. Two points about this:
+  (1) the "this" keyword can only be used in this special way 
+      by a constructor, not by a method. 
+  (2) If a constructor uses the "this" keyword in this way, it 
+      must be the very first thing that the constructor does. 
+
+Instance:
+- When a class has a field, unless the field is static (see 
+  below), each object of the class has its own copy of the 
+  field; each object can have a different value for the field. 
+  Non-static fields are often called instance variables (or 
+  instance fields), since each instance (object) of the class gets 
+  its own copy.
+- When a class has a method, unless the method is static, the 
+  method is allowed to access any field of the current class, 
+  whether the field is static or non-static. A non-static method
+  is called an instance method, since it uses or operates on an instance.
+
+Static:
+- A field declared as static is a class-wide field; it is not 
+  associated with any particular object. Each object does not 
+  have its own copy. The objects have access to the class-wide 
+  static field. 
+- To access a static method, use the name of the class; for 
+  example, Math.pow(3, 5). (Math is the name of a class.)
+- A static method can directly access static fields of the 
+  class, but cannot directly access non-static fields of the 
+  class. 
+- A static method can be called even before any objects are created.
+
+If we don't initialize a field of a class, Java assigns it a 
+default value:
+- int: 0
+- double: 0.0
+- boolean: false
+- every reference type (e.g., String, CoordinatePoint, etc.): null
+
+(Note that Java does NOT assign a default value for a local 
+variable, only for a field. A local variable is a variable that
+is declared in the body of a method or in a method header.)
+
+Composition/Aggregation:
+- a relationship that two classes can have
+- occurs when when an object consists of other objects;
+  that is, when a field of a class is of a reference type.
+- for example, the Circle and CoordinatePoint classes are in a 
+  composition/aggregation relationship, since every Circle
+  has a CoordinatePoint as one of its fields. 
+- This is known as the "has-a" relationship: every Circle has a CoordinatePoint
+- There's a slight difference between composition and aggregation, 
+  but we won't worry about that. 
+
+The client of a class (aka client code): Code that uses a class or 
+objects of that class. 
+E.g., TestCoordinatePoint is a client of CoordinatePoint. Also, 
+Circle is a client of CoordinatePoint. 

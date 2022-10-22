@@ -1,8 +1,14 @@
 # My learning journey with java (advanced topics).
--objects & classes 
--inhertince 
--polymorphism 
+-objects & classes
+ 
+-inhertince, 
+
+-casting, composition
+
+-polymorphism, object class
+
 -ArrayLists
+
 -exceptions
 
 
