@@ -1,0 +1,77 @@
+A variable of a primitive data type (char, double, int, etc.) 
+holds a single piece of information. 
+
+But what if we want something to hold a few pieces of related 
+data? 
+ - E.g., we might want something to hold the data about a book: 
+   a title, author, price, ISBN. 
+ - An array wouldn’t work here because an array holds data of a 
+   single type. 
+ - So we may want to create a new type (maybe called Book) to 
+   do this.
+
+A step further: we don't just want a new data type to hold some
+data; we want the data type to have built-in methods that can 
+process the data. 
+ - E.g., Book type might have a method to calculate price based on 
+   original price, tax, and discount. It might have a method to
+   determine if a book is suitable for kids. 
+
+Another example: Circle type: 
+ - data is radius; 
+ - methods to calculate area and perimeter, based on radius. 
+
+Another example: Rectangle type. 
+  - Data: height, width. maybe also x, y. maybe also color
+  - Behavior: calculate area, maybe determine whether it contains
+    a given point, many other possibilities
+
+So, how can we define our own data type? 
+By writing a class -- which we will discuss at length next week. 
+ - A typical class specifies data, a.k.a. fields, 
+   and also specifies certain behaviors, a.k.a. methods. 
+ - Different from the way we’ve been using classes so far, which was 
+   just a place to write the main method and other methods -- we weren’t
+   using the idea of a class to its full potential. 
+
+In order to utilize a class, we usually need to create an object 
+of the class. 
+- Class is the blueprint/template; an object is a specific 
+  instance of a class. 
+- For example, the String class contains lots of code specifying how 
+  Strings work. In order to actually use a String, we have to 
+  create a String object.
+
+Once a class has been written, we can create as many objects of 
+that class as we wish.
+E.g., we can define a Book class once and then create many 
+Book objects, each representing a different book. 
+
+We often have multiple classes in a program. 
+- E.g., a college may have a Student class, Faculty, Staff, 
+  Course, etc.
+- From now on, most of our programs will consist of multiple 
+  classes.
+- We typically put each class in its own file. 
+  So we will have multi-file programs.  
+
+Bootom lines: 
+- An object combines data (called fields) and behavior (methods) 
+  into one item. 
+- A class (not the way we've been using them until now) provides 
+  a blueprint for objects of a certain type. 
+
+
+
+
+
+
+
+Ignore the below; they're just private notes:
+null, NullPointerException
+string interning (not doing this topic),  
+using API documentation, 
+BigInteger and BigDecimal, 
+garbage collection, 
+copying objects (Rectangle has a copy constructor),
+ArrayList
