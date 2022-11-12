@@ -1,14 +1,11 @@
 # My learning journey with java (advanced topics).
--objects & classes
- 
--inhertince, 
 
--casting, composition
+*This repo includes educational grade code to demonstrate OOP and the following topics in the java language.
 
--polymorphism, object class
+-objects & classes, -inhertince, -casting, -composition
 
--ArrayLists
+-polymorphism, object class, -ArrayLists
 
--exceptions
+-exceptions, -interfaces & lambda expression, -collections
 
-
+-recursion, -java fx 
